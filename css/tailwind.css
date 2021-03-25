@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
-
-  *{
-    font-family: 'Noto Sans JP', sans-serif !important;
-  }
 
 
  /* Tab content - closed */
@@ -63,7 +58,7 @@
   }
 
   .container {
-    @apply  mx-auto  sm:px-48 px-4
+    @apply  mx-auto sm:px-48 px-4
   }
 
 
@@ -117,4 +112,21 @@
 
 .product_btn {
   @apply  bg-yellow-600 p-3 rounded-lg text-white font-semibold mt-2 outline-none border-none
+}
+
+
+.payment_container {
+  @apply w-full flex sm:flex-row flex-col p-6
+}
+
+.payment_methods  {
+  @apply font-bold py-4 text-xl opacity-75
+}
+
+.payment_title {
+ @apply font-medium	
+}
+
+.input-cart-number {
+  @apply  rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent max-w-sm bg-gray-100
 }
