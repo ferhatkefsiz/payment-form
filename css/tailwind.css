@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+  *{
+    font-family: 'Noto Sans JP', sans-serif !important;
+  }
+
+
+ /* Tab content - closed */
+ .tab-content {
+  max-height: 0;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+  }
+  /* :checked - resize to full height */
+  .tab input:checked ~ .tab-content {
+  max-height: 100vh;
+  }
+
+  /* Icon */
+  .tab label::after {
+  float:right;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+  }
+  /* Icon formatting - closed */
+  .tab input[type=checkbox] + label::after {
+  content: "+";
+  font-weight:bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  border-color: #b8c2cc; /*.border-grey*/
+  }
+  .tab input[type=radio] + label::after {
+  content: "\25BE";
+  font-weight:bold; /*.font-bold*/
+  border-width: 1px; /*.border*/
+  border-radius: 9999px; /*.rounded-full */
+  border-color: #b8c2cc; /*.border-grey*/
+  }
+  /* Icon formatting - open */
+  .tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+  background-color: #6574cd; /*.bg-indigo*/
+  color: #f8fafc; /*.text-grey-lightest*/
+  }
+  .tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+  background-color: hsl(231, 51%, 60%); /*.bg-indigo*/
+  color: #f8fafc; /*.text-grey-lightest*/
+  }
+
+  .container {
+    @apply  mx-auto  sm:px-48 px-4
+  }
+
+
+.container_title {
+  @apply flex items-end pt-4 pb-8
+}
+
+.container_title_primary{
+  @apply font-bold pr-2 text-2xl
+}
+
+.container_title_secondary{
+  @apply font-light
+}
+
+.product_container {
+  @apply flex sm:justify-between sm:flex-row flex-col
+}
+
+.product_container_ltside {
+  @apply  flex mt-8
+}
+
+.product_image {
+  @apply  w-32 h-32 mr-4
+}
+
+.product_name {
+  @apply font-semibold text-lg
+}
+
+.product_seller {
+  @apply font-light pb-3
+}
+
+.cargo_status {
+  @apply text-green-800 text-sm font-medium
+}
+
+.product_container_rtside {
+  @apply p-4
+}
+
+.product_price_title {
+  @apply uppercase text-sm font-medium pb-2 text-gray-700
+}
+
+.product_price {
+  @apply  text-2xl font-semibold pb-2
+}
+
+.product_btn {
+  @apply  bg-yellow-600 p-3 rounded-lg text-white font-semibold mt-2 outline-none border-none
+}
