@@ -3,7 +3,7 @@
 // Pop up function for product
 
 function popup() {
-  window.open('/html/ödeme.html',"Payment Form", 'width=1856,height=800,left=250,top=100,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no')
+  window.open('/html/paymentform.html', 'width=1856,height=800,left=250,top=100,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no')
 }
 
 

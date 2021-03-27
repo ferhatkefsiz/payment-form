@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 
- /* Tab content - closed */
- .tab-content {
+/* Tab content - closed */
+.tab-content {
   max-height: 0;
-  -webkit-transition: max-height .35s;
-  -o-transition: max-height .35s;
-  transition: max-height .35s;
-  }
-  /* :checked - resize to full height */
-  .tab input:checked ~ .tab-content {
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
   max-height: 100vh;
-  }
+}
 
-  /* Icon */
-  .tab label::after {
-  float:right;
+/* Icon */
+.tab label::after {
+  float: right;
   right: 0;
   top: 0;
   display: block;
@@ -26,107 +26,174 @@
   line-height: 1.5;
   font-size: 1.25rem;
   text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-  }
-  /* Icon formatting - closed */
-  .tab input[type=checkbox] + label::after {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+/* Icon formatting - closed */
+.tab input[type="checkbox"] + label::after {
   content: "+";
-  font-weight:bold; /*.font-bold*/
+  font-weight: bold; /*.font-bold*/
   border-width: 1px; /*.border*/
   border-radius: 9999px; /*.rounded-full */
   border-color: #b8c2cc; /*.border-grey*/
-  }
-  .tab input[type=radio] + label::after {
+}
+.tab input[type="radio"] + label::after {
   content: "\25BE";
-  font-weight:bold; /*.font-bold*/
+  font-weight: bold; /*.font-bold*/
   border-width: 1px; /*.border*/
   border-radius: 9999px; /*.rounded-full */
   border-color: #b8c2cc; /*.border-grey*/
-  }
-  /* Icon formatting - open */
-  .tab input[type=checkbox]:checked + label::after {
+}
+/* Icon formatting - open */
+.tab input[type="checkbox"]:checked + label::after {
   transform: rotate(315deg);
   background-color: #6574cd; /*.bg-indigo*/
   color: #f8fafc; /*.text-grey-lightest*/
-  }
-  .tab input[type=radio]:checked + label::after {
+}
+.tab input[type="radio"]:checked + label::after {
   transform: rotateX(180deg);
   background-color: hsl(231, 51%, 60%); /*.bg-indigo*/
   color: #f8fafc; /*.text-grey-lightest*/
-  }
+}
 
-  .container {
-    @apply  mx-auto sm:px-48 px-4
-  }
-
+.container {
+  @apply mx-auto sm:px-48 px-4;
+}
 
 .container_title {
-  @apply flex items-end pt-4 pb-8
+  @apply flex items-end pt-4 pb-8;
 }
 
-.container_title_primary{
-  @apply font-bold pr-2 text-2xl
+.container_title_primary {
+  @apply font-bold pr-2 text-2xl;
 }
 
-.container_title_secondary{
-  @apply font-light
+.container_title_secondary {
+  @apply font-light;
 }
 
 .product_container {
-  @apply flex sm:justify-between sm:flex-row flex-col
+  @apply flex sm:justify-between sm:flex-row flex-col;
 }
 
 .product_container_ltside {
-  @apply  flex mt-8
+  @apply flex mt-8;
 }
 
 .product_image {
-  @apply  w-32 h-32 mr-4
+  @apply w-32 h-32 mr-4;
 }
 
 .product_name {
-  @apply font-semibold text-lg
+  @apply font-semibold text-lg;
 }
 
 .product_seller {
-  @apply font-light pb-3
+  @apply font-light pb-3;
 }
 
 .cargo_status {
-  @apply text-green-800 text-sm font-medium
+  @apply text-green-800 text-sm font-medium;
 }
 
 .product_container_rtside {
-  @apply p-4
+  @apply p-4;
 }
 
 .product_price_title {
-  @apply uppercase text-sm font-medium pb-2 text-gray-700
+  @apply uppercase text-sm font-medium pb-2 text-gray-700;
 }
 
 .product_price {
-  @apply  text-2xl font-semibold pb-2
+  @apply text-2xl font-semibold pb-2;
 }
 
 .product_btn {
-  @apply  bg-yellow-600 p-3 rounded-lg text-white font-semibold mt-2 outline-none border-none
+  @apply bg-yellow-600 p-3 rounded-lg text-white font-semibold mt-2 outline-none border-none;
 }
-
 
 .payment_container {
-  @apply w-full flex sm:flex-row flex-col p-6
+  @apply w-full flex sm:flex-row flex-col p-6;
 }
 
-.payment_methods  {
-  @apply font-bold py-4 text-xl opacity-75
+.payment_methods {
+  @apply font-bold py-4 text-xl opacity-75;
 }
 
 .payment_title {
- @apply font-medium	
+  @apply font-medium;
 }
 
 .input-cart-number {
-  @apply  rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent max-w-sm bg-gray-100
+  @apply rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent max-w-sm bg-gray-100;
+}
+
+.payment-title {
+  @apply text-base font-medium 
+}
+
+.payment-desc {
+  @apply text-sm  text-gray-500;
+}
+
+.payment_banks {
+  @apply w-full mt-4 mb-4;
+}
+
+.payment_banks_container {
+  @apply flex border-gray-300 items-center border rounded-md  pt-4 pb-4 mt-4 mb-4;
+}
+
+.payment_checkbox {
+  @apply ml-5;
+}
+
+.bank_img {
+  width: 82px;
+  margin-left: 1.25rem;
+}
+
+.bank_text {
+  @apply ml-6;
+}
+
+.bank_name {
+  @apply font-semibold text-sm  text-gray-600;
+}
+
+.bank_status {
+  @apply font-normal text-xs  text-gray-600;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  width: 5px;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
 }
