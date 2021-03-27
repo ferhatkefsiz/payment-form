@@ -1,6 +1,6 @@
 // Pop up function for product
 function popup() {
-  window.open('/html/paymentform.html', 'Payment', 'width=1856,height=800,left=250,top=100,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no')
+  window.open('/frontend/html/paymentform.html', 'Payment', 'width=1856,height=800,left=250,top=100,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no')
 }
 
 /* Optional Javascript to close the radio button version by clicking it again */

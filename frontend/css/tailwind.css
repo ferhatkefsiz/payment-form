@@ -5,8 +5,8 @@
 /* Font Family  */
 @font-face {
   font-family: "SF Pro Text";
-  src: url("/assets/fonts/SFProText-Regular.woff") format("woff2"),
-    url("/assets/fonts/SFProText-Regular.woff") format("woff");
+  src: url("/frontend/fonts/SFProText-Regular.woff") format("woff2"),
+    url("/frontend/fonts/SFProText-Regular.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,8 +14,8 @@
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url("/assets/fonts/SFProText-Medium.woff") format("woff2"),
-    url("/assets/fonts/SFProText-Medium.woff2") format("woff");
+  src: url("/frontend/fonts/SFProText-Medium.woff") format("woff2"),
+    url("/frontend/fonts/SFProText-Medium.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -23,8 +23,8 @@
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url("/assets/fonts/SFProText-Semibold.woff") format("woff2"),
-    url("/assets/fonts/SFProText-Semibold.woff2") format("woff");
+  src: url("/frontend/fonts/SFProText-Semibold.woff") format("woff2"),
+    url("/frontend/fonts/SFProText-Semibold.woff2") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -113,8 +113,16 @@
   @apply flex sm:justify-between sm:flex-row flex-col;
 }
 
+.shop {
+  @apply border border-gray-500 rounded-md py-4 pr-6
+}
+
+.top {
+  @apply py-4 px-4
+}
+
 .product_container_ltside {
-  @apply flex mt-8;
+  @apply flex ;
 }
 
 .product_image {
@@ -133,8 +141,10 @@
   @apply text-green-800 text-sm font-medium;
 }
 
+
+
 .product_container_rtside {
-  @apply p-4 rounded-lg  border bg-white border-gray-400;
+  @apply rounded-lg  bg-white border-gray-400 flex-col items-center justify-center text-center bg-white;
 }
 
 .product_price_title {
@@ -153,6 +163,7 @@
   border-radius: 40px;
   outline: none;
   letter-spacing: 1px;
+  margin-top: 4px;
 }
 .product_btn {
   @apply focus:outline-none;
@@ -272,7 +283,7 @@ input[type="checkbox"]:checked:after {
   border-radius: 15px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: linear-gradient(135deg, #11998e, #38ef7d);
+  background: linear-gradient(90deg, rgba(108,100,247,1) 6%, rgba(0,212,255,1) 100%);
   position: absolute;
   color: #fff;
   top: 0;
