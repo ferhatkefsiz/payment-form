@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Family  */
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/assets/fonts/SFProText-Regular.woff') format('woff2'),
+      url('/assets/fonts/SFProText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/assets/fonts/SFProText-Medium.woff') format('woff2'),
+      url('/assets/fonts/SFProText-Medium.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/assets/fonts/SFProText-Semibold.woff') format('woff2'),
+      url('/assets/fonts/SFProText-Semibold.woff2') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: 'SF Pro Text';
+}
+/* Font Family End  */
+
+
 
 /* Tab content - closed */
 .tab-content {
