@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
   </head>
 
-  <body class="bg-gray-200">
-    <div class="payment_container">
-      <div class="max-w-6xl p-4">
+  <body class="bg-gray-100">
+    <div class="container product_container">
+      <div class="w-full sm:p-4">
         <h1 class="payment_methods">Ödeme yöntemleri</h1>
 
         <div class="shadow-md">
-          <div class="tab w-full overflow-hidden border-t bg-white">
+          <div class="tab w-full overflow-hidden bg-white">
             <input
               class="absolute opacity-0"
               id="tab-single-one"
@@ -28,15 +28,9 @@
               <span class="payment_title">Banka / Kredi Kartı</span>
             </label>
             <div
-              class="tab-content overflow-hidden border-l-2 border-indigo-500 leading-normal"
+              class="tab-content overflow-hidden border-l-2 border-color leading-normal sm:flex"
             >
-              <p class="p-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tenetur, architecto, explicabo perferendis nostrum, maxime
-                impedit atque odit sunt pariatur illo obcaecati soluta molestias
-                iure facere dolorum adipisci eum? Saepe, itaque.
-              </p>
-              <form class="sm:px-12 px-6">
+              <form class="sm:px-12 px-6 mb-4">
                 <div class="mb-8">
                   <label for="required-email" class="text-gray-700">
                     Kart Numarası
@@ -44,8 +38,10 @@
                   <div class="mt-2">
                     <input
                       class="input-cart-number"
+                      id="credit-card"
                       placeholder="••••  ••••  ••••  ••••"
                       type="num"
+                      maxlength="19"
                     />
                   </div>
                 </div>
@@ -55,7 +51,8 @@
                   <div class="mt-2">
                     <input
                       type="text"
-                      class="input-cart-number"
+                      id="card-holder"
+                      class="input-cart-person"
                       placeholder="Kart sahibinin adı ve soyadı"
                     />
                   </div>
@@ -63,36 +60,87 @@
 
                 <div class="flex">
                   <div class="mr-8">
-                    <label for="required-email" class="text-gray-700">
-                      Son kullanma tarihi
-                    </label>
-                    <div class="w-32">
-                      <input
-                        id="required-email"
-                        class="input-cart-number"
-                        placeholder="Ay / Yıl"
-                        type="num"
-                      />
+                    <label for="expire-month">Son Kullanım Tarihi</label>
+                    <div class="card-expire flex mt-2">
+                      <div class="select mr-2">
+                        <select id="expire-month" class="cart-date">
+                          <option></option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                      </div>
+                      <div class="select">
+                        <select id="expire-year" class="cart-date">
+                          <option></option>
+                          <option>2016</option>
+                          <option>2017</option>
+                          <option>2018</option>
+                          <option>2019</option>
+                          <option>2020</option>
+                          <option>2021</option>
+                          <option>2022</option>
+                          <option>2023</option>
+                          <option>2024</option>
+                          <option>2025</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
 
                   <div>
-                    <label for="required-email" class="text-gray-700">
+                    <label for="card-ccv" class="text-gray-700">
                       Güvenlik kodu
                     </label>
-                    <div>
+                    <div class="mt-2">
                       <input
-                        id="required-email"
-                        class="input-cart-number"
-                        placeholder="**** **** **** ****"
+                        id="card-ccv"
+                        placeholder="CCV / CVV"
                         type="num"
+                        maxlength="3"
+                        class="input-cart-ccv"
                       />
                     </div>
                   </div>
                 </div>
               </form>
+              <div>
+                <div class="credit-card-box">
+                  <div class="flip">
+                    <div class="front">
+                      <div class="chip"></div>
+                      <div class="number"></div>
+                      <div class="card-holder">
+                        <label>Kart Sahibi</label>
+                        <div></div>
+                      </div>
+                      <div class="card-expiration-date">
+                        <label>Tarih</label>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="strip"></div>
+                      <div class="ccv">
+                        <label>CCV</label>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="tab w-full overflow-hidden border-t bg-white">
             <input
               class="absolute opacity-0"
@@ -107,7 +155,7 @@
               <span class="payment_title"> Anında Havale </span>
             </label>
             <div
-              class="tab-content overflow-hidden border-l-2 border-indigo-500 leading-normal"
+              class="tab-content overflow-hidden border-l-2 border-color leading-normal"
             >
               <div class="sm:px-12 px-6">
                 <div>
@@ -180,18 +228,20 @@
         </div>
       </div>
 
-      <div>
-        <div class="product_container_rtside">
-          <div>
-            <h4 class="product_price_title">Ödenecek Tutar</h4>
+      <div class="sm:mt-12 mt-6">
+        <form action="https://eticsoft.com" method="POST" target="_blank">
+          <div class="product_container_rtside">
+            <div>
+              <h4 class="product_price_title">Ödenecek Tutar</h4>
+            </div>
+            <div class="product_price">65,00 TL</div>
+            <button class="product_btn">Şimdi Öde</button>
           </div>
-          <div class="product_price">65,00 TL</div>
-          <button class="product_btn opacity-50 cursor-not-allowed">
-            Alışverişi Tamamla
-          </button>
-        </div>
+        </form>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </body>
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/form.js"></script>
 </html>
