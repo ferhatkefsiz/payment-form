@@ -1,6 +1,6 @@
 module.exports = {
   theme: {},
-  purge: [],
+  purge: false,
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --open /frontend/html/index.html"
+    "dev": "vite --open /frontend/html/index.html",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
