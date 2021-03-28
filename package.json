@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite --open /frontend/html/index.html",
+    "preview": "vite preview",
     "build": "vite build"
   },
   "keywords": [],
