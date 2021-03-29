@@ -241,7 +241,7 @@ body {
   color: #fff;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 930px) {
   .checkout {
     width: 230px;
     padding: 10px 0px 10px;
@@ -539,7 +539,7 @@ input:focus {
   font-weight: 300;
 }
 
-@media (max-width: 800px) {
+@media  (max-width: 900px) {
   .shopping-cart {
     width: 100%;
     height: auto;
