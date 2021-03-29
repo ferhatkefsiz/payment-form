@@ -2,13 +2,13 @@
 
 <p align="center">
   <img src="https://vitejs.dev/logo.svg" height="60">
-  <img src="frontend/images/plus.png"  height="30">
+  <img src="/images/plus.png"  height="30">
 
   <img src="https://www.markusantonwolf.com/media/pages/blog/tailwind-css/265298487-1596675041/tailwind-css-logo.svg" height="60">
-  <img src="frontend/images/plus.png"  height="30">
+  <img src="/images/plus.png"  height="30">
 
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PostCSS_Logo.svg/1200px-PostCSS_Logo.svg.png" height="60">
-  <img src="frontend/images/plus.png"  height="30">
+  <img src="/images/plus.png"  height="30">
 
   <img src="https://i.dlpng.com/static/png/348405_preview.png" height="65" />
   

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --open /index.html",
+    "dev": "vite --open",
     "preview": "vite preview",
     "build": "vite build"
   },
